@@ -1,0 +1,96 @@
+{
+  "shopper_flow": {
+    "feature": "E2E Shopper Flow — Browse › Store › Product › Bag › Checkout › Place Order",
+    "total_steps": 8,
+    "environments": {
+      "staging": {
+        "app_package": "live.hoods.staging",
+        "app_activity": ".MainActivity",
+        "vars": {
+          "store_desc": "jim_perfume_store",
+          "product_desc": "150"
+        }
+      },
+      "production": {
+        "app_package": "live.hoods",
+        "app_activity": ".MainActivity",
+        "vars": {
+          "store_desc": "jim_perfume_store",
+          "product_desc": "150"
+        }
+      }
+    },
+    "steps": [
+      {
+        "index": 1,
+        "label": "Open Profile tab",
+        "action": "tap_percent",
+        "pre_delay_ms": 5000,
+        "post_delay_ms": 3000,
+        "value": { "x_pct": 0.875, "y_pct": 0.95 }
+      },
+      {
+        "index": 2,
+        "label": "Select store {{store_desc}}",
+        "action": "click",
+        "selector": { "type": "content_desc_contains", "value": "{{store_desc}}" },
+        "timeout_ms": 20000,
+        "post_delay_ms": 500
+      },
+      {
+        "index": 3,
+        "label": "Select product containing {{product_desc}}",
+        "action": "click",
+        "selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
+        "timeout_ms": 20000,
+        "post_delay_ms": 500
+      },
+      {
+        "index": 4,
+        "label": "Scroll to 'Add to bag' and tap",
+        "action": "scroll_click",
+        "selector": { "type": "content_desc_exact", "value": "Add to bag" },
+        "max_scrolls": 6,
+        "timeout_ms": 20000,
+        "post_delay_ms": 2000
+      },
+      {
+        "index": 5,
+        "label": "Open Bag tab",
+        "action": "tap_percent",
+        "post_delay_ms": 3000,
+        "value": { "x_pct": 0.625, "y_pct": 0.95 }
+      },
+      {
+        "index": 6,
+        "label": "Check out",
+        "action": "click",
+        "selector": { "type": "content_desc_contains", "value": "Check out" },
+        "timeout_ms": 20000,
+        "post_delay_ms": 3000
+      },
+      {
+        "index": 7,
+        "label": "Place your order",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Place your order" },
+        "timeout_ms": 20000,
+        "post_delay_ms": 1000,
+        "screenshot_before": "before_place_order",
+        "screenshot_after": "after_place_order"
+      },
+      {
+        "index": 8,
+        "label": "Confirm order — poll 'Maybe later'",
+        "action": "poll_confirm",
+        "confirm_selector": { "type": "content_desc_exact", "value": "Maybe later" },
+        "retap_selector": { "type": "content_desc_exact", "value": "Place your order" },
+        "retap_on_trial": 2,
+        "trials": 3,
+        "poll_interval_ms": 3000,
+        "order_id_selector": { "type": "content_desc_contains", "value": "Order Number" },
+        "order_id_regex": "(\\d+)"
+      }
+    ]
+  }
+}
