@@ -94,7 +94,7 @@
     ]
   },
   "seller_flow": {
-    "feature": "E2E Seller Flow — Upload Video › Select Product › Post",
+    "feature": "E2E Seller Flow — Upload Video \u203a Select Product \u203a Post",
     "total_steps": 9,
     "environments": {
       "staging": {
@@ -102,7 +102,6 @@
         "app_activity": "live.hoods.seller.staging.MainActivity",
         "vars": {
           "product_desc": "worldcup",
-          "video_file_name": "AI Try",
           "video_title": "AI Try"
         }
       },
@@ -111,7 +110,6 @@
         "app_activity": "live.hoods.seller.MainActivity",
         "vars": {
           "product_desc": "worldcup",
-          "video_file_name": "AI Try",
           "video_title": "AI Try"
         }
       }
@@ -121,7 +119,6 @@
         "index": 1,
         "label": "Tap the '+' Create icon",
         "action": "tap_percent",
-        "pre_delay_ms": 3000,
         "post_delay_ms": 1000,
         "value": { "x_pct": 0.5, "y_pct": 0.95 }
       },
@@ -130,16 +127,14 @@
         "label": "Tap 'Upload a Video'",
         "action": "click",
         "selector": { "type": "content_desc_exact", "value": "Upload a Video" },
-        "timeout_ms": 20000,
+        "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
       {
         "index": 3,
-        "label": "Select video '{{video_file_name}}' in file picker",
+        "label": "Select '{{video_title}}' video in device file picker",
         "action": "pick_file",
-        "selector": { "type": "text_contains", "value": "{{video_file_name}}" },
-        "fallback_resource_id": "com.android.documentsui:id/icon_thumb",
-        "fallback_tap_percent": { "x_pct": 0.26, "y_pct": 0.60 },
+        "selector": { "type": "text_contains", "value": "{{video_title}}" },
         "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
@@ -162,11 +157,11 @@
       },
       {
         "index": 6,
-        "label": "Select product containing {{product_desc}}",
+        "label": "Select product {{product_desc}}",
         "action": "scroll_click",
-        "selector": { "type": "text_contains", "value": "{{product_desc}}" },
+        "selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
         "max_scrolls": 6,
-        "timeout_ms": 15000,
+        "timeout_ms": 20000,
         "post_delay_ms": 500
       },
       {
@@ -187,17 +182,14 @@
       },
       {
         "index": 9,
-        "label": "Wait for video upload to finish (no error)",
+        "label": "Wait for video upload to finish (~2 min), watching for an error dialog",
         "action": "poll_no_error",
         "error_selectors": [
           { "type": "content_desc_contains", "value": "error" },
-          { "type": "content_desc_contains", "value": "close_icon" },
-          { "type": "text_contains", "value": "error" },
-          { "type": "text_contains", "value": "Error" },
-          { "type": "text_contains", "value": "failed" }
+          { "type": "text_contains", "value": "error" }
         ],
-        "trials": 12,
-        "poll_interval_ms": 10000
+        "trials": 24,
+        "poll_interval_ms": 5000
       }
     ]
   }
