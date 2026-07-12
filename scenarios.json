@@ -1,6 +1,6 @@
 {
   "shopper_flow": {
-    "feature": "E2E Shopper Flow — Browse › Store › Product › Bag › Checkout › Place Order",
+    "feature": "E2E Shopper Flow — Browse › Store › Product › Bag › Checkout › Place Order › Confirm",
     "total_steps": 8,
     "environments": {
       "staging": {
@@ -94,8 +94,8 @@
     ]
   },
   "seller_flow": {
-    "feature": "E2E Seller Flow — Upload Video › Select Product › Post",
-    "total_steps": 9,
+    "feature": "E2E Seller Flow — Upload Video › Select Product › Post › Confirm Returned to Feed",
+    "total_steps": 10,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -199,12 +199,28 @@
         ],
         "trials": 24,
         "poll_interval_ms": 5000
+      },
+      {
+        "index": 10,
+        "label": "Confirm the cycle closed — back on the main feed with the bottom nav visible",
+        "action": "poll_confirm",
+        "confirm_selector": {
+          "type": "position_region",
+          "value": "",
+          "instance": 2,
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.88,
+          "y_pct_max": 1.0
+        },
+        "trials": 5,
+        "poll_interval_ms": 2000
       }
     ]
   },
   "go_live_flow": {
-    "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live",
-    "total_steps": 10,
+    "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live › Confirm Started",
+    "total_steps": 11,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -318,6 +334,17 @@
         "fallback_selector": { "type": "text_contains", "value": "Go Live" },
         "timeout_ms": 15000,
         "post_delay_ms": 1000
+      },
+      {
+        "index": 11,
+        "label": "Confirm the live session actually started — 'Go Live' button should be gone",
+        "action": "poll_no_error",
+        "error_selectors": [
+          { "type": "content_desc_exact", "value": "Go Live" },
+          { "type": "text_contains", "value": "Go Live" }
+        ],
+        "trials": 4,
+        "poll_interval_ms": 2000
       }
     ]
   }
