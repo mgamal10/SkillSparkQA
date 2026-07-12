@@ -27,13 +27,19 @@
         "action": "tap_percent",
         "pre_delay_ms": 5000,
         "post_delay_ms": 3000,
-        "value": { "x_pct": 0.875, "y_pct": 0.95 }
+        "value": {
+          "x_pct": 0.875,
+          "y_pct": 0.95
+        }
       },
       {
         "index": 2,
         "label": "Select store {{store_desc}}",
         "action": "click",
-        "selector": { "type": "content_desc_contains", "value": "{{store_desc}}" },
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "{{store_desc}}"
+        },
         "timeout_ms": 20000,
         "post_delay_ms": 500
       },
@@ -41,7 +47,10 @@
         "index": 3,
         "label": "Select product containing {{product_desc}}",
         "action": "click",
-        "selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "{{product_desc}}"
+        },
         "timeout_ms": 20000,
         "post_delay_ms": 500
       },
@@ -49,7 +58,10 @@
         "index": 4,
         "label": "Scroll to 'Add to bag' and tap",
         "action": "scroll_click",
-        "selector": { "type": "content_desc_exact", "value": "Add to bag" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Add to bag"
+        },
         "max_scrolls": 6,
         "timeout_ms": 20000,
         "post_delay_ms": 2000
@@ -59,13 +71,19 @@
         "label": "Open Bag tab",
         "action": "tap_percent",
         "post_delay_ms": 3000,
-        "value": { "x_pct": 0.625, "y_pct": 0.95 }
+        "value": {
+          "x_pct": 0.625,
+          "y_pct": 0.95
+        }
       },
       {
         "index": 6,
         "label": "Check out",
         "action": "click",
-        "selector": { "type": "content_desc_contains", "value": "Check out" },
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "Check out"
+        },
         "timeout_ms": 20000,
         "post_delay_ms": 3000
       },
@@ -73,7 +91,10 @@
         "index": 7,
         "label": "Place your order",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Place your order" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Place your order"
+        },
         "timeout_ms": 20000,
         "post_delay_ms": 1000,
         "screenshot_before": "before_place_order",
@@ -83,12 +104,21 @@
         "index": 8,
         "label": "Confirm order — poll 'Maybe later'",
         "action": "poll_confirm",
-        "confirm_selector": { "type": "content_desc_exact", "value": "Maybe later" },
-        "retap_selector": { "type": "content_desc_exact", "value": "Place your order" },
+        "confirm_selector": {
+          "type": "content_desc_exact",
+          "value": "Maybe later"
+        },
+        "retap_selector": {
+          "type": "content_desc_exact",
+          "value": "Place your order"
+        },
         "retap_on_trial": 2,
         "trials": 3,
         "poll_interval_ms": 3000,
-        "order_id_selector": { "type": "content_desc_contains", "value": "Order Number" },
+        "order_id_selector": {
+          "type": "content_desc_contains",
+          "value": "Order Number"
+        },
         "order_id_regex": "(\\d+)"
       }
     ]
@@ -128,14 +158,20 @@
           "y_pct_min": 0.88,
           "y_pct_max": 1.0
         },
-        "fallback_tap_percent": { "x_pct": 0.5, "y_pct": 0.95 },
+        "fallback_tap_percent": {
+          "x_pct": 0.5,
+          "y_pct": 0.95
+        },
         "post_delay_ms": 1000
       },
       {
         "index": 2,
         "label": "Tap 'Upload a Video'",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Upload a Video" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Upload a Video"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
@@ -143,7 +179,10 @@
         "index": 3,
         "label": "Select '{{video_title}}' video in device file picker",
         "action": "pick_file",
-        "selector": { "type": "text_contains", "value": "{{video_title}}" },
+        "selector": {
+          "type": "text_contains",
+          "value": "{{video_title}}"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
@@ -151,7 +190,10 @@
         "index": 4,
         "label": "Enter video title",
         "action": "type_text",
-        "selector": { "type": "class_name", "value": "android.widget.EditText" },
+        "selector": {
+          "type": "class_name",
+          "value": "android.widget.EditText"
+        },
         "text": "{{video_title}}",
         "timeout_ms": 15000,
         "post_delay_ms": 500
@@ -160,7 +202,10 @@
         "index": 5,
         "label": "Tap 'Select Products'",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Select Products" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Select Products"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1000
       },
@@ -168,7 +213,10 @@
         "index": 6,
         "label": "Select product {{product_desc}}",
         "action": "scroll_click",
-        "selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "{{product_desc}}"
+        },
         "max_scrolls": 6,
         "timeout_ms": 20000,
         "post_delay_ms": 500
@@ -177,8 +225,14 @@
         "index": 7,
         "label": "Confirm product selection ('Ok')",
         "action": "click_verified",
-        "selector": { "type": "content_desc_contains", "value": "ok" },
-        "retry_selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "ok"
+        },
+        "retry_selector": {
+          "type": "content_desc_contains",
+          "value": "{{product_desc}}"
+        },
         "count": 1,
         "trials": 3,
         "poll_interval_ms": 1000,
@@ -189,7 +243,10 @@
         "index": 8,
         "label": "Tap 'Post Video'",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Post Video" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Post Video"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 700
       },
@@ -198,8 +255,14 @@
         "label": "Wait for video upload to finish (~2 min), watching for an error dialog",
         "action": "poll_no_error",
         "error_selectors": [
-          { "type": "content_desc_contains", "value": "error" },
-          { "type": "text_contains", "value": "error" }
+          {
+            "type": "content_desc_contains",
+            "value": "error"
+          },
+          {
+            "type": "text_contains",
+            "value": "error"
+          }
         ],
         "trials": 24,
         "poll_interval_ms": 5000
@@ -224,17 +287,23 @@
   },
   "go_live_flow": {
     "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live › Confirm Started",
-    "total_steps": 11,
+    "total_steps": 15,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
         "app_activity": "live.hoods.seller.staging.MainActivity",
-        "vars": {}
+        "vars": {
+          "product_desc_1": "worldcup",
+          "product_desc_2": "Vr!"
+        }
       },
       "production": {
         "app_package": "live.hoods.seller",
         "app_activity": "live.hoods.seller.MainActivity",
-        "vars": {}
+        "vars": {
+          "product_desc_1": "worldcup",
+          "product_desc_2": "Vr!"
+        }
       }
     },
     "steps": [
@@ -251,14 +320,20 @@
           "y_pct_min": 0.88,
           "y_pct_max": 1.0
         },
-        "fallback_tap_percent": { "x_pct": 0.5, "y_pct": 0.95 },
+        "fallback_tap_percent": {
+          "x_pct": 0.5,
+          "y_pct": 0.95
+        },
         "post_delay_ms": 1000
       },
       {
         "index": 2,
         "label": "Tap 'Start a Live Show'",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Start a Live Show" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Start a Live Show"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
@@ -266,7 +341,10 @@
         "index": 3,
         "label": "Enter a live video title",
         "action": "type_text",
-        "selector": { "type": "class_name", "value": "android.widget.EditText" },
+        "selector": {
+          "type": "class_name",
+          "value": "android.widget.EditText"
+        },
         "text": "{{random_title}}",
         "timeout_ms": 15000,
         "post_delay_ms": 500
@@ -275,88 +353,165 @@
         "index": 4,
         "label": "Tap 'Select Products'",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Select Products" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Select Products"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1500
       },
       {
         "index": 5,
-        "label": "Select 2 random products",
-        "action": "select_random_products",
+        "label": "Select product 1: {{product_desc_1}}",
+        "action": "scroll_click",
         "selector": {
-          "type": "position_region",
-          "value": "android.widget.ImageView",
-          "x_pct_min": 0.0,
-          "x_pct_max": 1.0,
-          "y_pct_min": 0.20,
-          "y_pct_max": 0.88
+          "type": "content_desc_contains",
+          "value": "{{product_desc_1}}"
         },
-        "count": 2,
-        "timeout_ms": 15000,
+        "max_scrolls": 6,
+        "timeout_ms": 20000,
         "post_delay_ms": 500
       },
       {
         "index": 6,
+        "label": "Verify product picker still open after selecting product 1",
+        "action": "assert_present",
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "ok"
+        },
+        "timeout_ms": 2000
+      },
+      {
+        "index": 7,
+        "label": "Select product 2: {{product_desc_2}}",
+        "action": "scroll_click",
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "{{product_desc_2}}"
+        },
+        "max_scrolls": 6,
+        "timeout_ms": 20000,
+        "post_delay_ms": 500
+      },
+      {
+        "index": 8,
+        "label": "Verify product picker still open after selecting product 2",
+        "action": "assert_present",
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "ok"
+        },
+        "timeout_ms": 2000
+      },
+      {
+        "index": 9,
         "label": "Confirm product selection ('Ok')",
         "action": "click_verified",
-        "selector": { "type": "content_desc_contains", "value": "ok" },
-        "retry_selector": {
-          "type": "position_region",
-          "value": "android.widget.ImageView",
-          "x_pct_min": 0.0,
-          "x_pct_max": 1.0,
-          "y_pct_min": 0.20,
-          "y_pct_max": 0.88
+        "selector": {
+          "type": "content_desc_contains",
+          "value": "ok"
         },
-        "count": 2,
+        "retry_selector": {
+          "type": "content_desc_contains",
+          "value": "{{product_desc_1}}"
+        },
+        "count": 1,
         "trials": 3,
         "poll_interval_ms": 1000,
         "timeout_ms": 15000,
         "post_delay_ms": 500
       },
       {
-        "index": 7,
+        "index": 10,
+        "label": "Verify product selection actually persisted after Ok (catches app-side selection drop)",
+        "action": "poll_no_error",
+        "error_selectors": [
+          {
+            "type": "content_desc_contains",
+            "value": "select at least 1 product"
+          },
+          {
+            "type": "text_contains",
+            "value": "select at least 1 product"
+          }
+        ],
+        "trials": 1,
+        "poll_interval_ms": 800
+      },
+      {
+        "index": 11,
         "label": "Tap 'Prepare Live'",
-        "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Prepare Live" },
-        "fallback_selector": { "type": "text_contains", "value": "Prepare Live" },
+        "action": "click_verified",
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Prepare Live"
+        },
+        "fallback_selector": {
+          "type": "text_contains",
+          "value": "Prepare Live"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 2000
       },
       {
-        "index": 8,
+        "index": 12,
         "label": "Tap 'Camera' to turn the camera off",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Camera" },
-        "fallback_selector": { "type": "text_contains", "value": "Camera" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Camera"
+        },
+        "fallback_selector": {
+          "type": "text_contains",
+          "value": "Camera"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 800
       },
       {
-        "index": 9,
+        "index": 13,
         "label": "Tap 'Mute' to turn the mic off",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Mute" },
-        "fallback_selector": { "type": "text_contains", "value": "Mute" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Mute"
+        },
+        "fallback_selector": {
+          "type": "text_contains",
+          "value": "Mute"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 800
       },
       {
-        "index": 10,
+        "index": 14,
         "label": "Tap 'Go Live' to complete the cycle",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Go Live" },
-        "fallback_selector": { "type": "text_contains", "value": "Go Live" },
+        "selector": {
+          "type": "content_desc_exact",
+          "value": "Go Live"
+        },
+        "fallback_selector": {
+          "type": "text_contains",
+          "value": "Go Live"
+        },
         "timeout_ms": 15000,
         "post_delay_ms": 1000
       },
       {
-        "index": 11,
+        "index": 15,
         "label": "Confirm the live session actually started — 'Go Live' button should be gone",
         "action": "poll_no_error",
         "error_selectors": [
-          { "type": "content_desc_exact", "value": "Go Live" },
-          { "type": "text_contains", "value": "Go Live" }
+          {
+            "type": "content_desc_exact",
+            "value": "Go Live"
+          },
+          {
+            "type": "text_contains",
+            "value": "Go Live"
+          }
         ],
         "trials": 4,
         "poll_interval_ms": 2000
