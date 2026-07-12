@@ -177,7 +177,7 @@
         "index": 7,
         "label": "Confirm product selection ('Ok')",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "Ok" },
+        "selector": { "type": "content_desc_contains", "value": "ok" },
         "timeout_ms": 15000,
         "post_delay_ms": 500
       },
@@ -263,16 +263,23 @@
         "index": 5,
         "label": "Select 2 random products",
         "action": "select_random_products",
-        "selector": { "type": "resource_id", "value": "product_item" },
+        "selector": {
+          "type": "position_region",
+          "value": "",
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.20,
+          "y_pct_max": 0.88
+        },
         "count": 2,
         "timeout_ms": 15000,
         "post_delay_ms": 500
       },
       {
         "index": 6,
-        "label": "Confirm product selection ('OK')",
+        "label": "Confirm product selection ('Ok')",
         "action": "click",
-        "selector": { "type": "content_desc_exact", "value": "OK" },
+        "selector": { "type": "content_desc_contains", "value": "ok" },
         "timeout_ms": 15000,
         "post_delay_ms": 500
       }
