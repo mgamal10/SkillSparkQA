@@ -203,8 +203,8 @@
     ]
   },
   "go_live_flow": {
-    "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm",
-    "total_steps": 6,
+    "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live",
+    "total_steps": 10,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -282,6 +282,42 @@
         "selector": { "type": "content_desc_contains", "value": "ok" },
         "timeout_ms": 15000,
         "post_delay_ms": 500
+      },
+      {
+        "index": 7,
+        "label": "Tap 'Prepare Live'",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Prepare Live" },
+        "fallback_selector": { "type": "text_contains", "value": "Prepare Live" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 2000
+      },
+      {
+        "index": 8,
+        "label": "Tap 'Camera' to turn the camera off",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Camera" },
+        "fallback_selector": { "type": "text_contains", "value": "Camera" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 800
+      },
+      {
+        "index": 9,
+        "label": "Tap 'Mute' to turn the mic off",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Mute" },
+        "fallback_selector": { "type": "text_contains", "value": "Mute" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 800
+      },
+      {
+        "index": 10,
+        "label": "Tap 'Go Live' to complete the cycle",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Go Live" },
+        "fallback_selector": { "type": "text_contains", "value": "Go Live" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 1000
       }
     ]
   }
