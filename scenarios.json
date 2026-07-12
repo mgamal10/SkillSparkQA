@@ -94,7 +94,7 @@
     ]
   },
   "seller_flow": {
-    "feature": "E2E Seller Flow — Upload Video \u203a Select Product \u203a Post",
+    "feature": "E2E Seller Flow — Upload Video › Select Product › Post",
     "total_steps": 9,
     "environments": {
       "staging": {
@@ -117,10 +117,19 @@
     "steps": [
       {
         "index": 1,
-        "label": "Tap the '+' Create icon",
-        "action": "tap_percent",
-        "post_delay_ms": 1000,
-        "value": { "x_pct": 0.5, "y_pct": 0.95 }
+        "label": "Tap the '+' Create icon (3rd of 5 bottom nav buttons)",
+        "action": "click",
+        "selector": {
+          "type": "position_region",
+          "value": "",
+          "instance": 2,
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.88,
+          "y_pct_max": 1.0
+        },
+        "fallback_tap_percent": { "x_pct": 0.5, "y_pct": 0.95 },
+        "post_delay_ms": 1000
       },
       {
         "index": 2,
@@ -194,7 +203,7 @@
     ]
   },
   "go_live_flow": {
-    "feature": "E2E Go Live Flow — Start Live \u203a Title \u203a Select Products \u203a Confirm",
+    "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm",
     "total_steps": 6,
     "environments": {
       "staging": {
@@ -211,10 +220,19 @@
     "steps": [
       {
         "index": 1,
-        "label": "Tap the '+' Create icon",
-        "action": "tap_percent",
-        "post_delay_ms": 1000,
-        "value": { "x_pct": 0.5, "y_pct": 0.95 }
+        "label": "Tap the '+' Create icon (3rd of 5 bottom nav buttons)",
+        "action": "click",
+        "selector": {
+          "type": "position_region",
+          "value": "",
+          "instance": 2,
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.88,
+          "y_pct_max": 1.0
+        },
+        "fallback_tap_percent": { "x_pct": 0.5, "y_pct": 0.95 },
+        "post_delay_ms": 1000
       },
       {
         "index": 2,
