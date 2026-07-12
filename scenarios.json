@@ -176,8 +176,12 @@
       {
         "index": 7,
         "label": "Confirm product selection ('Ok')",
-        "action": "click",
+        "action": "click_verified",
         "selector": { "type": "content_desc_contains", "value": "ok" },
+        "retry_selector": { "type": "content_desc_contains", "value": "{{product_desc}}" },
+        "count": 1,
+        "trials": 3,
+        "poll_interval_ms": 1000,
         "timeout_ms": 15000,
         "post_delay_ms": 500
       },
@@ -281,7 +285,7 @@
         "action": "select_random_products",
         "selector": {
           "type": "position_region",
-          "value": "",
+          "value": "android.widget.ImageView",
           "x_pct_min": 0.0,
           "x_pct_max": 1.0,
           "y_pct_min": 0.20,
@@ -294,8 +298,19 @@
       {
         "index": 6,
         "label": "Confirm product selection ('Ok')",
-        "action": "click",
+        "action": "click_verified",
         "selector": { "type": "content_desc_contains", "value": "ok" },
+        "retry_selector": {
+          "type": "position_region",
+          "value": "android.widget.ImageView",
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.20,
+          "y_pct_max": 0.88
+        },
+        "count": 2,
+        "trials": 3,
+        "poll_interval_ms": 1000,
         "timeout_ms": 15000,
         "post_delay_ms": 500
       },
