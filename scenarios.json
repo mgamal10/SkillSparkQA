@@ -192,5 +192,72 @@
         "poll_interval_ms": 5000
       }
     ]
+  },
+  "go_live_flow": {
+    "feature": "E2E Go Live Flow — Start Live \u203a Title \u203a Select Products \u203a Confirm",
+    "total_steps": 6,
+    "environments": {
+      "staging": {
+        "app_package": "live.hoods.seller.staging",
+        "app_activity": "live.hoods.seller.staging.MainActivity",
+        "vars": {}
+      },
+      "production": {
+        "app_package": "live.hoods.seller",
+        "app_activity": "live.hoods.seller.MainActivity",
+        "vars": {}
+      }
+    },
+    "steps": [
+      {
+        "index": 1,
+        "label": "Tap the '+' Create icon",
+        "action": "tap_percent",
+        "post_delay_ms": 1000,
+        "value": { "x_pct": 0.5, "y_pct": 0.95 }
+      },
+      {
+        "index": 2,
+        "label": "Tap 'Start a Live Show'",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Start a Live Show" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 1500
+      },
+      {
+        "index": 3,
+        "label": "Enter a live video title",
+        "action": "type_text",
+        "selector": { "type": "class_name", "value": "android.widget.EditText" },
+        "text": "{{random_title}}",
+        "timeout_ms": 15000,
+        "post_delay_ms": 500
+      },
+      {
+        "index": 4,
+        "label": "Tap 'Select Products'",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "Select Products" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 1500
+      },
+      {
+        "index": 5,
+        "label": "Select 2 random products",
+        "action": "select_random_products",
+        "selector": { "type": "resource_id", "value": "product_item" },
+        "count": 2,
+        "timeout_ms": 15000,
+        "post_delay_ms": 500
+      },
+      {
+        "index": 6,
+        "label": "Confirm product selection ('OK')",
+        "action": "click",
+        "selector": { "type": "content_desc_exact", "value": "OK" },
+        "timeout_ms": 15000,
+        "post_delay_ms": 500
+      }
+    ]
   }
 }
