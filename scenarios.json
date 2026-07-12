@@ -201,7 +201,8 @@
       {
         "index": 5,
         "label": "Hide keyboard after entering title",
-        "action": "hide_keyboard"
+        "action": "hide_keyboard",
+        "selector": { "type": "class_name", "value": "android.widget.EditText" }
       },
       {
         "index": 6,
@@ -357,7 +358,8 @@
       {
         "index": 4,
         "label": "Hide keyboard after entering title",
-        "action": "hide_keyboard"
+        "action": "hide_keyboard",
+        "selector": { "type": "class_name", "value": "android.widget.EditText" }
       },
       {
         "index": 5,
