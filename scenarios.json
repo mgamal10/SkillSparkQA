@@ -125,7 +125,7 @@
   },
   "seller_flow": {
     "feature": "E2E Seller Flow — Upload Video › Select Product › Post › Confirm Returned to Feed",
-    "total_steps": 10,
+    "total_steps": 11,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -200,6 +200,11 @@
       },
       {
         "index": 5,
+        "label": "Hide keyboard after entering title",
+        "action": "hide_keyboard"
+      },
+      {
+        "index": 6,
         "label": "Tap 'Select Products'",
         "action": "click",
         "selector": {
@@ -210,7 +215,7 @@
         "post_delay_ms": 1000
       },
       {
-        "index": 6,
+        "index": 7,
         "label": "Select product {{product_desc}}",
         "action": "scroll_click",
         "selector": {
@@ -222,7 +227,7 @@
         "post_delay_ms": 500
       },
       {
-        "index": 7,
+        "index": 8,
         "label": "Confirm product selection ('Ok')",
         "action": "click_verified",
         "selector": {
@@ -240,7 +245,7 @@
         "post_delay_ms": 500
       },
       {
-        "index": 8,
+        "index": 9,
         "label": "Tap 'Post Video'",
         "action": "click",
         "selector": {
@@ -251,7 +256,7 @@
         "post_delay_ms": 700
       },
       {
-        "index": 9,
+        "index": 10,
         "label": "Wait for video upload to finish (~2 min), watching for an error dialog",
         "action": "poll_no_error",
         "error_selectors": [
@@ -268,7 +273,7 @@
         "poll_interval_ms": 5000
       },
       {
-        "index": 10,
+        "index": 11,
         "label": "Confirm the cycle closed — back on the main feed with the bottom nav visible",
         "action": "poll_confirm",
         "confirm_selector": {
@@ -287,7 +292,7 @@
   },
   "go_live_flow": {
     "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live › Confirm Started",
-    "total_steps": 15,
+    "total_steps": 16,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -351,6 +356,11 @@
       },
       {
         "index": 4,
+        "label": "Hide keyboard after entering title",
+        "action": "hide_keyboard"
+      },
+      {
+        "index": 5,
         "label": "Tap 'Select Products'",
         "action": "click",
         "selector": {
@@ -361,7 +371,7 @@
         "post_delay_ms": 1500
       },
       {
-        "index": 5,
+        "index": 6,
         "label": "Select product 1: {{product_desc_1}}",
         "action": "scroll_click",
         "selector": {
@@ -373,7 +383,7 @@
         "post_delay_ms": 500
       },
       {
-        "index": 6,
+        "index": 7,
         "label": "Verify product picker still open after selecting product 1",
         "action": "assert_present",
         "selector": {
@@ -383,7 +393,7 @@
         "timeout_ms": 2000
       },
       {
-        "index": 7,
+        "index": 8,
         "label": "Select product 2: {{product_desc_2}}",
         "action": "scroll_click",
         "selector": {
@@ -395,7 +405,7 @@
         "post_delay_ms": 500
       },
       {
-        "index": 8,
+        "index": 9,
         "label": "Verify product picker still open after selecting product 2",
         "action": "assert_present",
         "selector": {
@@ -405,7 +415,7 @@
         "timeout_ms": 2000
       },
       {
-        "index": 9,
+        "index": 10,
         "label": "Confirm product selection ('Ok')",
         "action": "click_verified",
         "selector": {
@@ -423,7 +433,7 @@
         "post_delay_ms": 500
       },
       {
-        "index": 10,
+        "index": 11,
         "label": "Verify product selection actually persisted after Ok (catches app-side selection drop)",
         "action": "poll_no_error",
         "error_selectors": [
@@ -440,7 +450,7 @@
         "poll_interval_ms": 800
       },
       {
-        "index": 11,
+        "index": 12,
         "label": "Tap 'Prepare Live'",
         "action": "click_verified",
         "selector": {
@@ -455,7 +465,7 @@
         "post_delay_ms": 2000
       },
       {
-        "index": 12,
+        "index": 13,
         "label": "Tap 'Camera' to turn the camera off",
         "action": "click",
         "selector": {
@@ -470,7 +480,7 @@
         "post_delay_ms": 800
       },
       {
-        "index": 13,
+        "index": 14,
         "label": "Tap 'Mute' to turn the mic off",
         "action": "click",
         "selector": {
@@ -485,7 +495,7 @@
         "post_delay_ms": 800
       },
       {
-        "index": 14,
+        "index": 15,
         "label": "Tap 'Go Live' to complete the cycle",
         "action": "click",
         "selector": {
@@ -500,7 +510,7 @@
         "post_delay_ms": 1000
       },
       {
-        "index": 15,
+        "index": 16,
         "label": "Confirm the live session actually started — 'Go Live' button should be gone",
         "action": "poll_no_error",
         "error_selectors": [
