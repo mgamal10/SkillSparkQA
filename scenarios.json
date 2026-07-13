@@ -147,16 +147,12 @@
     "steps": [
       {
         "index": 1,
-        "label": "Tap the '+' Create icon (3rd of 5 bottom nav buttons)",
+        "label": "Tap the '+' Create icon (3rd icon in the bottom nav row)",
         "action": "click",
         "selector": {
-          "type": "position_region",
+          "type": "bottom_nav_instance",
           "value": "",
-          "instance": 2,
-          "x_pct_min": 0.0,
-          "x_pct_max": 1.0,
-          "y_pct_min": 0.88,
-          "y_pct_max": 1.0
+          "instance": 2
         },
         "fallback_tap_percent": {
           "x_pct": 0.5,
@@ -278,13 +274,9 @@
         "label": "Confirm the cycle closed — back on the main feed with the bottom nav visible",
         "action": "poll_confirm",
         "confirm_selector": {
-          "type": "position_region",
+          "type": "bottom_nav_instance",
           "value": "",
-          "instance": 2,
-          "x_pct_min": 0.0,
-          "x_pct_max": 1.0,
-          "y_pct_min": 0.88,
-          "y_pct_max": 1.0
+          "instance": 2
         },
         "trials": 5,
         "poll_interval_ms": 2000
@@ -315,16 +307,12 @@
     "steps": [
       {
         "index": 1,
-        "label": "Tap the '+' Create icon (3rd of 5 bottom nav buttons)",
+        "label": "Tap the '+' Create icon (3rd icon in the bottom nav row)",
         "action": "click",
         "selector": {
-          "type": "position_region",
+          "type": "bottom_nav_instance",
           "value": "",
-          "instance": 2,
-          "x_pct_min": 0.0,
-          "x_pct_max": 1.0,
-          "y_pct_min": 0.88,
-          "y_pct_max": 1.0
+          "instance": 2
         },
         "fallback_tap_percent": {
           "x_pct": 0.5,
