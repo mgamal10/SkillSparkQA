@@ -25,8 +25,8 @@
         "index": 1,
         "label": "Open Profile tab",
         "action": "tap_percent",
-        "pre_delay_ms": 5000,
-        "post_delay_ms": 3000,
+        "pre_delay_ms": 2000,
+        "post_delay_ms": 1500,
         "value": {
           "x_pct": 0.875,
           "y_pct": 0.95
@@ -40,8 +40,8 @@
           "type": "content_desc_contains",
           "value": "{{store_desc}}"
         },
-        "timeout_ms": 20000,
-        "post_delay_ms": 500
+        "timeout_ms": 12000,
+        "post_delay_ms": 300
       },
       {
         "index": 3,
@@ -51,8 +51,8 @@
           "type": "content_desc_contains",
           "value": "{{product_desc}}"
         },
-        "timeout_ms": 20000,
-        "post_delay_ms": 500
+        "timeout_ms": 12000,
+        "post_delay_ms": 300
       },
       {
         "index": 4,
@@ -63,14 +63,14 @@
           "value": "Add to bag"
         },
         "max_scrolls": 6,
-        "timeout_ms": 20000,
-        "post_delay_ms": 2000
+        "timeout_ms": 12000,
+        "post_delay_ms": 1000
       },
       {
         "index": 5,
         "label": "Open Bag tab",
         "action": "tap_percent",
-        "post_delay_ms": 3000,
+        "post_delay_ms": 1500,
         "value": {
           "x_pct": 0.625,
           "y_pct": 0.95
@@ -84,8 +84,8 @@
           "type": "content_desc_contains",
           "value": "Check out"
         },
-        "timeout_ms": 20000,
-        "post_delay_ms": 3000
+        "timeout_ms": 12000,
+        "post_delay_ms": 1500
       },
       {
         "index": 7,
@@ -95,8 +95,8 @@
           "type": "content_desc_exact",
           "value": "Place your order"
         },
-        "timeout_ms": 20000,
-        "post_delay_ms": 1000,
+        "timeout_ms": 12000,
+        "post_delay_ms": 500,
         "screenshot_before": "before_place_order",
         "screenshot_after": "after_place_order"
       },
@@ -114,7 +114,7 @@
         },
         "retap_on_trial": 2,
         "trials": 3,
-        "poll_interval_ms": 3000,
+        "poll_interval_ms": 2000,
         "order_id_selector": {
           "type": "content_desc_contains",
           "value": "Order Number"
@@ -158,7 +158,7 @@
           "x_pct": 0.5,
           "y_pct": 0.95
         },
-        "post_delay_ms": 1000
+        "post_delay_ms": 600
       },
       {
         "index": 2,
@@ -168,8 +168,8 @@
           "type": "content_desc_exact",
           "value": "Upload a Video"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1500
+        "timeout_ms": 10000,
+        "post_delay_ms": 800
       },
       {
         "index": 3,
@@ -179,8 +179,8 @@
           "type": "text_contains",
           "value": "{{video_title}}"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1500
+        "timeout_ms": 10000,
+        "post_delay_ms": 800
       },
       {
         "index": 4,
@@ -191,8 +191,8 @@
           "value": "android.widget.EditText"
         },
         "text": "{{video_title}}",
-        "timeout_ms": 15000,
-        "post_delay_ms": 500
+        "timeout_ms": 10000,
+        "post_delay_ms": 300
       },
       {
         "index": 5,
@@ -208,8 +208,8 @@
           "type": "content_desc_exact",
           "value": "Select Products"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1000
+        "timeout_ms": 10000,
+        "post_delay_ms": 600
       },
       {
         "index": 7,
@@ -220,8 +220,8 @@
           "value": "{{product_desc}}"
         },
         "max_scrolls": 6,
-        "timeout_ms": 20000,
-        "post_delay_ms": 500
+        "timeout_ms": 12000,
+        "post_delay_ms": 300
       },
       {
         "index": 8,
@@ -237,9 +237,9 @@
         },
         "count": 1,
         "trials": 3,
-        "poll_interval_ms": 1000,
-        "timeout_ms": 15000,
-        "post_delay_ms": 500
+        "poll_interval_ms": 800,
+        "timeout_ms": 10000,
+        "post_delay_ms": 300
       },
       {
         "index": 9,
@@ -249,8 +249,8 @@
           "type": "content_desc_exact",
           "value": "Post Video"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 700
+        "timeout_ms": 10000,
+        "post_delay_ms": 400
       },
       {
         "index": 10,
@@ -267,7 +267,7 @@
           }
         ],
         "trials": 24,
-        "poll_interval_ms": 5000
+        "poll_interval_ms": 4000
       },
       {
         "index": 11,
@@ -279,7 +279,7 @@
           "instance": 2
         },
         "trials": 5,
-        "poll_interval_ms": 2000
+        "poll_interval_ms": 1500
       }
     ]
   },
@@ -318,7 +318,7 @@
           "x_pct": 0.5,
           "y_pct": 0.95
         },
-        "post_delay_ms": 1000
+        "post_delay_ms": 600
       },
       {
         "index": 2,
@@ -328,8 +328,8 @@
           "type": "content_desc_exact",
           "value": "Start a Live Show"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1500
+        "timeout_ms": 10000,
+        "post_delay_ms": 800
       },
       {
         "index": 3,
@@ -340,8 +340,8 @@
           "value": "android.widget.EditText"
         },
         "text": "{{random_title}}",
-        "timeout_ms": 15000,
-        "post_delay_ms": 500
+        "timeout_ms": 10000,
+        "post_delay_ms": 300
       },
       {
         "index": 4,
@@ -357,8 +357,8 @@
           "type": "content_desc_exact",
           "value": "Select Products"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1500
+        "timeout_ms": 10000,
+        "post_delay_ms": 800
       },
       {
         "index": 6,
@@ -369,8 +369,8 @@
           "value": "{{product_desc_1}}"
         },
         "max_scrolls": 6,
-        "timeout_ms": 20000,
-        "post_delay_ms": 500
+        "timeout_ms": 12000,
+        "post_delay_ms": 300
       },
       {
         "index": 7,
@@ -380,7 +380,7 @@
           "type": "content_desc_contains",
           "value": "ok"
         },
-        "timeout_ms": 2000
+        "timeout_ms": 1500
       },
       {
         "index": 8,
@@ -391,8 +391,8 @@
           "value": "{{product_desc_2}}"
         },
         "max_scrolls": 6,
-        "timeout_ms": 20000,
-        "post_delay_ms": 500
+        "timeout_ms": 12000,
+        "post_delay_ms": 300
       },
       {
         "index": 9,
@@ -402,7 +402,7 @@
           "type": "content_desc_contains",
           "value": "ok"
         },
-        "timeout_ms": 2000
+        "timeout_ms": 1500
       },
       {
         "index": 10,
@@ -418,9 +418,9 @@
         },
         "count": 1,
         "trials": 3,
-        "poll_interval_ms": 1000,
-        "timeout_ms": 15000,
-        "post_delay_ms": 500
+        "poll_interval_ms": 800,
+        "timeout_ms": 10000,
+        "post_delay_ms": 300
       },
       {
         "index": 11,
@@ -434,8 +434,8 @@
           "type": "text_contains",
           "value": "Prepare Live"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 2000
+        "timeout_ms": 10000,
+        "post_delay_ms": 1000
       },
       {
         "index": 12,
@@ -449,8 +449,8 @@
           "type": "text_contains",
           "value": "Camera"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 800
+        "timeout_ms": 10000,
+        "post_delay_ms": 500
       },
       {
         "index": 13,
@@ -464,8 +464,8 @@
           "type": "text_contains",
           "value": "Mute"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 800
+        "timeout_ms": 10000,
+        "post_delay_ms": 500
       },
       {
         "index": 14,
@@ -479,8 +479,8 @@
           "type": "text_contains",
           "value": "Go Live"
         },
-        "timeout_ms": 15000,
-        "post_delay_ms": 1000
+        "timeout_ms": 10000,
+        "post_delay_ms": 600
       },
       {
         "index": 15,
@@ -497,7 +497,7 @@
           }
         ],
         "trials": 4,
-        "poll_interval_ms": 2000
+        "poll_interval_ms": 1500
       }
     ]
   }
