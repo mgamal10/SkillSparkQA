@@ -439,30 +439,32 @@
       },
       {
         "index": 12,
-        "label": "Tap 'Camera' to turn the camera off",
+        "label": "Turn camera off (tap the 'Video' toggle icon)",
         "action": "click",
         "selector": {
-          "type": "content_desc_exact",
-          "value": "Camera"
-        },
-        "fallback_selector": {
-          "type": "text_contains",
-          "value": "Camera"
+          "type": "position_region",
+          "value": "android.widget.ImageView",
+          "instance": 4,
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.9,
+          "y_pct_max": 1.0
         },
         "timeout_ms": 10000,
         "post_delay_ms": 500
       },
       {
         "index": 13,
-        "label": "Tap 'Mute' to turn the mic off",
+        "label": "Turn mic off (tap the 'Mute' toggle icon)",
         "action": "click",
         "selector": {
-          "type": "content_desc_exact",
-          "value": "Mute"
-        },
-        "fallback_selector": {
-          "type": "text_contains",
-          "value": "Mute"
+          "type": "position_region",
+          "value": "android.widget.ImageView",
+          "instance": 3,
+          "x_pct_min": 0.0,
+          "x_pct_max": 1.0,
+          "y_pct_min": 0.9,
+          "y_pct_max": 1.0
         },
         "timeout_ms": 10000,
         "post_delay_ms": 500
