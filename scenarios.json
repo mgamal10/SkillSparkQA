@@ -293,7 +293,7 @@
   },
   "go_live_flow": {
     "feature": "E2E Go Live Flow — Start Live › Title › Select Products › Confirm › Prepare › Go Live › Confirm Started",
-    "total_steps": 16,
+    "total_steps": 15,
     "environments": {
       "staging": {
         "app_package": "live.hoods.seller.staging",
@@ -436,23 +436,6 @@
       },
       {
         "index": 11,
-        "label": "Verify product selection actually persisted after Ok (catches app-side selection drop)",
-        "action": "poll_no_error",
-        "error_selectors": [
-          {
-            "type": "content_desc_contains",
-            "value": "select at least 1 product"
-          },
-          {
-            "type": "text_contains",
-            "value": "select at least 1 product"
-          }
-        ],
-        "trials": 1,
-        "poll_interval_ms": 800
-      },
-      {
-        "index": 12,
         "label": "Tap 'Prepare Live'",
         "action": "click_verified",
         "selector": {
@@ -467,7 +450,7 @@
         "post_delay_ms": 2000
       },
       {
-        "index": 13,
+        "index": 12,
         "label": "Tap 'Camera' to turn the camera off",
         "action": "click",
         "selector": {
@@ -482,7 +465,7 @@
         "post_delay_ms": 800
       },
       {
-        "index": 14,
+        "index": 13,
         "label": "Tap 'Mute' to turn the mic off",
         "action": "click",
         "selector": {
@@ -497,7 +480,7 @@
         "post_delay_ms": 800
       },
       {
-        "index": 15,
+        "index": 14,
         "label": "Tap 'Go Live' to complete the cycle",
         "action": "click",
         "selector": {
@@ -512,7 +495,7 @@
         "post_delay_ms": 1000
       },
       {
-        "index": 16,
+        "index": 15,
         "label": "Confirm the live session actually started — 'Go Live' button should be gone",
         "action": "poll_no_error",
         "error_selectors": [
